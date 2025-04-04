@@ -114,17 +114,16 @@ streamlit run app.py
 
 ## 📸 Demo
 
-🎥 Watch the demo here: `demo.mp4`
+🎥 **Watch the Demo Video**
 
+👉 [Click to watch on GitHub](https://github.com/user-attachments/assets/e5961cc0-d43e-4038-994a-c46a290bf075)
 
-https://github.com/user-attachments/assets/e5961cc0-d43e-4038-994a-c46a290bf075
+📁 **Or view on Google Drive:**
 
--- Drive video Link:
-https://drive.google.com/file/d/1WEl45yrzX4mkZ1M-IrFPVyvvICZTToFN/view?usp=sharing
+🔗 [Watch on Google Drive](https://drive.google.com/file/d/1WEl45yrzX4mkZ1M-IrFPVyvvICZTToFN/view?usp=sharing)
 
-Or try with the sample file in `sample_pdfs/example.pdf`.
+📂 You can also try with the sample file: `sample_pdfs/example.pdf`
 
----
 
 ## ⚙️ Setup Instructions
 

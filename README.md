@@ -27,34 +27,7 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 ---
 
 ## 📁 Project Structure
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{fancyvrb}
-
-\begin{document}
-
-\section*{Project Directory Structure}
-
-\begin{Verbatim}
-pdf-table-extractor/
-├── app.py
-├── smart_pdf_table_parser.py
-├── templates/
-│   └── index.html
-├── static/
-│   └── style.css (if any)
-├── uploads/
-├── outputs/
-├── sample_pdfs/
-│   └── example.pdf
-├── output_excels/
-│   └── example.xlsx
-├── README.md
-├── requirements.txt
-└── demo.mp4
-\end{Verbatim}
-
-\end{document}
+<pre> ```text pdf-table-extractor/ ├── app.py ├── smart_pdf_table_parser.py ├── templates/ │ └── index.html ├── static/ │ └── style.css (if any) ├── uploads/ ├── outputs/ ├── sample_pdfs/ │ └── example.pdf ├── output_excels/ │ └── example.xlsx ├── README.md ├── requirements.txt └── demo.mp4 ``` </pre>
 
 
 📝 Requirements

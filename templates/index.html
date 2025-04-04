@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Table Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #dropZone {
+            border: 2px dashed #ccc;
+            padding: 40px;
+            margin: 20px auto;
+            width: 60%;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        #dropZone.dragover {
+            background-color: #e6f7ff;
+        }
+
+        #spinner {
+            display: none;
+            margin: 20px auto;
+        }
+
+        #spinner:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            border: 5px solid #ccc;
+            border-top-color: #007bff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        #downloadLink {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload a PDF File</h2>
+
+    <div id="dropZone">
+        <p>Drag & Drop PDF here or click to browse</p>
+        <input type="file" id="fileInput" style="display: none;" />
+    </div>
+
+    <div id="spinner"></div>
+
+    <p id="result"></p>
+    <a id="downloadLink" download>Download Excel File</a>
+    <!-- Dark Mode Toggle -->
+    <label style="position: absolute; top: 20px; right: 30px;">
+        <input type="checkbox" id="darkToggle" />
+        🌙 Dark Mode
+    </label>
+
+    <script>
+        const dropZone = document.getElementById("dropZone");
+        const fileInput = document.getElementById("fileInput");
+        const spinner = document.getElementById("spinner");
+        const resultText = document.getElementById("result");
+        const downloadLink = document.getElementById("downloadLink");
+
+        dropZone.addEventListener("click", () => fileInput.click());
+
+        dropZone.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZone.classList.add("dragover");
+        });
+
+        dropZone.addEventListener("dragleave", () => {
+            dropZone.classList.remove("dragover");
+        });
+
+        dropZone.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropZone.classList.remove("dragover");
+            const file = e.dataTransfer.files[0];
+            handleFileUpload(file);
+        });
+
+        fileInput.addEventListener("change", () => {
+            const file = fileInput.files[0];
+            handleFileUpload(file);
+        });
+
+        function handleFileUpload(file) {
+            if (!file || file.type !== "application/pdf") {
+                resultText.innerText = "Please upload a valid PDF file.";
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            spinner.style.display = "block";
+            resultText.innerText = "";
+            downloadLink.style.display = "none";
+
+            fetch("/upload", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                spinner.style.display = "none";
+                resultText.innerText = data.message || data.error;
+
+                if (data.download_link) {
+                    downloadLink.href = data.download_link;
+                    downloadLink.style.display = "inline-block";
+                    downloadLink.innerText = "Download Excel";
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                spinner.style.display = "none";
+                resultText.innerText = "Error occurred.";
+            });
+        }
+
+        // Dark mode toggle
+        document.getElementById("darkToggle").addEventListener("change", function () {
+            document.body.classList.toggle("dark", this.checked);
+        });
+
+    </script>
+</body>
+</html>

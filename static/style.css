@@ -1,0 +1,134 @@
+/* Global Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 20px;
+    color: #333;
+}
+
+/* Header */
+h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #222;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+/* Drop Zone */
+#dropZone {
+    border: 3px dashed #007bff;
+    padding: 50px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fdfdfd;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+}
+
+#dropZone p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#dropZone.dragover {
+    background-color: #e6f3ff;
+    border-color: #0056b3;
+}
+
+/* Spinner */
+#spinner {
+    margin: 20px;
+    display: none;
+}
+
+#spinner::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    border-top-color: #007bff;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Result Text */
+#result {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* Download Link */
+#downloadLink {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 14px rgba(40, 167, 69, 0.4);
+}
+
+#downloadLink:hover {
+    background-color: #218838;
+}
+/* Dark mode styles */
+body.dark {
+    background: linear-gradient(to right, #1e1e2f, #2c2c3c);
+    color: #eee;
+}
+
+body.dark h2 {
+    color: #fff;
+    text-shadow: none;
+}
+
+body.dark #dropZone {
+    background-color: #2f2f3f;
+    border-color: #007bff;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark #dropZone p {
+    color: #ddd;
+}
+
+body.dark #dropZone.dragover {
+    background-color: #3a3a4d;
+    border-color: #66b2ff;
+}
+
+body.dark #downloadLink {
+    background-color: #1dd1a1;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(29, 209, 161, 0.4);
+}
+
+body.dark #downloadLink:hover {
+    background-color: #10ac84;
+}

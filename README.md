@@ -27,7 +27,56 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 ---
 
 ## 📁 Project Structure
-pdf-table-extractor/ ├── app.py # Flask app ├── smart_pdf_table_parser.py # Core table extraction logic ├── templates/ │ └── index.html # Frontend UI ├── static/ │ └── style.css # (Optional) CSS styling ├── uploads/ # Uploaded PDF files ├── outputs/ # Temporary output images/data ├── sample_pdfs/ │ └── example.pdf # Sample PDF for testing ├── output_excels/ │ └── example.xlsx # Extracted Excel output ├── README.md # Project documentation ├── requirements.txt # Python dependencies └── demo.mp4 # Demo video of the tool
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Table Extractor</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>📁 Project Structure</h2>
+    <pre><code>
+pdf-table-extractor/
+├── app.py
+├── smart_pdf_table_parser.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css (if any)
+├── uploads/
+├── outputs/
+├── sample_pdfs/
+│   └── example.pdf
+├── output_excels/
+│   └── example.xlsx
+├── README.md
+├── requirements.txt
+└── demo.mp4
+    </code></pre>
+
+</body>
+</html>
+
 
 📝 Requirements
 Python 3.7+

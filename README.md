@@ -1,14 +1,14 @@
 # pdf-table-extractor
 Develop a tool to detect and extract tables from system-generated PDFs without using Tabula, Camelot, or converting the PDF into images. The extracted tables should then be stored in an Excel sheet. The tables may have borders, no borders, and irregular shapes.
 
-#🔍 Problem Statement
+## 🔍 Problem Statement
 Extracting tables from PDFs is often painful.
 
 Many solutions require converting PDFs to images or use bulky tools like Tabula/Camelot.
 
 Irregular layouts or missing borders make things worse.
 
-#💡 Our Solution
+## 💡 Our Solution
 A smart PDF table extractor built with pdfplumber, pymupdf, and pandas.
 
 Accurately detects and extracts tables from system-generated PDFs (even with irregular shapes or no borders).

@@ -38,5 +38,23 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 <pre> ```text pdf-table-extractor/ ├── app.py ├── smart_pdf_table_parser.py ├── templates/ │ └── index.html ├── static/ │ └── style.css (if any) ├── uploads/ ├── outputs/ ├── sample_pdfs/ │ └── example.pdf ├── output_excels/ │ └── example.xlsx ├── README.md ├── requirements.txt └── demo.mp4 ``` </pre>
 
 
+---
+
+## 📸 Demo
+
+🎥 Watch the demo here: `demo.mp4`
+
+Or try with the sample file in `sample_pdfs/example.pdf`.
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/pdf-table-extractor.git
+cd pdf-table-extractor
+
+
 
 📝 Requirements

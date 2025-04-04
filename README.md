@@ -12,6 +12,71 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 ![Screenshot 2025-04-04 162745](https://github.com/user-attachments/assets/19c5ac6e-99d1-476d-a819-1acf4b6f148b)
 ![Screenshot 2025-04-04 162758](https://github.com/user-attachments/assets/93b6b892-18f1-466a-a98b-d4e3a423b046)
 
+
+
+---
+
+## ⚙️ Libraries Used
+
+| Library      | Description |
+|--------------|-------------|
+| `pdfplumber` | Extracts tables from PDFs, especially those without needing image conversion |
+| `pymupdf`    | Handles PDF layout, structure, and metadata |
+| `pandas`     | Used to structure table data into DataFrames |
+| `openpyxl`   | For saving extracted data into Excel format |
+| `streamlit`  | Creates the interactive web interface |
+
+---
+
+
+
+## 🛠️ Setup Instructions
+
+### ✅ Step 1: Create Virtual Environment
+
+```bash
+python -m venv venv
+
+
+ Step 2: Activate Virtual Environment
+On Windows (PowerShell):
+
+bash
+Copy
+Edit
+.\venv\Scripts\Activate.ps1
+On Command Prompt:
+
+bash
+Copy
+Edit
+.\venv\Scripts\activate.bat
+On Linux/Mac:
+
+bash
+Copy
+Edit
+source venv/bin/activate
+
+
+Step 3: Install Required Libraries
+You can install all required libraries at once:
+
+bash
+Copy
+Edit
+pip install pdfplumber pymupdf pandas openpyxl streamlit
+Or install one-by-one:
+
+bash
+Copy
+Edit
+pip install pdfplumber
+pip install pymupdf
+pip install pandas
+pip install openpyxl
+pip install streamlit
+
 ## 🚀 Features
 
 - ✅ Detects and extracts **tables** from PDFs (bordered or borderless)
@@ -21,6 +86,13 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 - ✅ Simple and intuitive **web interface**
 
 ## 🛠️ Tech Stack
+
+🚀 How to Run the App
+bash
+Copy
+Edit
+streamlit run app.py
+
 
 | Technology      | Use Case                                |
 |------------------|------------------------------------------|
@@ -52,7 +124,7 @@ Or try with the sample file in `sample_pdfs/example.pdf`.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/pdf-table-extractor.git
+[git clone https://github.com/your-username/pdf-table-extractor.git](https://github.com/surajbhan93/pdf-table-extractor.git)
 cd pdf-table-extractor
 
 

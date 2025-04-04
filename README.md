@@ -27,35 +27,15 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 ---
 
 ## 📁 Project Structure
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PDF Table Extractor</title>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        pre {
-            background-color: #1e1e1e;
-            color: #d4d4d4;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
 
-    <h2>📁 Project Structure</h2>
-    <pre><code>
+\begin{document}
+
+\section*{Project Directory Structure}
+
+\begin{Verbatim}
 pdf-table-extractor/
 ├── app.py
 ├── smart_pdf_table_parser.py
@@ -72,10 +52,9 @@ pdf-table-extractor/
 ├── README.md
 ├── requirements.txt
 └── demo.mp4
-    </code></pre>
+\end{Verbatim}
 
-</body>
-</html>
+\end{document}
 
 
 📝 Requirements

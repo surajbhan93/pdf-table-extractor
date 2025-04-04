@@ -27,7 +27,7 @@ Develop a tool to detect and extract tables from system-generated PDFs without u
 ---
 
 ## 📁 Project Structure
-
+pdf-table-extractor/ ├── app.py # Flask app ├── smart_pdf_table_parser.py # Core table extraction logic ├── templates/ │ └── index.html # Frontend UI ├── static/ │ └── style.css # (Optional) CSS styling ├── uploads/ # Uploaded PDF files ├── outputs/ # Temporary output images/data ├── sample_pdfs/ │ └── example.pdf # Sample PDF for testing ├── output_excels/ │ └── example.xlsx # Extracted Excel output ├── README.md # Project documentation ├── requirements.txt # Python dependencies └── demo.mp4 # Demo video of the tool
 
 📝 Requirements
 Python 3.7+

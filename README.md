@@ -26,10 +26,7 @@ Exports the data directly to Excel.
 ## Frontend Images
 ![Screenshot 2025-04-04 162745](https://github.com/user-attachments/assets/19c5ac6e-99d1-476d-a819-1acf4b6f148b)
 ![Screenshot 2025-04-04 162758](https://github.com/user-attachments/assets/93b6b892-18f1-466a-a98b-d4e3a423b046)
-## excel file images data with column separate
-![Screenshot 2025-04-04 172712](https://github.com/user-attachments/assets/a9acee43-cc06-4835-af31-ebb19d574636)
 
-![Screenshot 2025-04-04 172725](https://github.com/user-attachments/assets/91c078eb-190c-4db6-a532-2991ab99d517)
 
 ---
 ## 📸 Demo
